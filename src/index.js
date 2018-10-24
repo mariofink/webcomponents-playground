@@ -1,4 +1,3 @@
-require("@webcomponents/webcomponentsjs");
 import TestComponent from "./components/testComponent";
 import Notification from "./components/notification/notification";
 

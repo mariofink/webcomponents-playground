@@ -17,8 +17,8 @@ export default class Notification extends HTMLElement {
   }
 
   typeChangedHandler(value) {
-    console.log("type has been changed");
+    console.log("type has been changed", this.childNodes);
     this.notificationTypeDOMElement.innerText = value;
-    this.prepend(this.notificationTypeDOMElement);
+    this.insertBefore(this.notificationTypeDOMElement, this.childNodes[0]);
   }
 }
