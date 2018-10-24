@@ -1,4 +1,4 @@
-class TestComponent extends HTMLElement {
+export default class TestComponent extends HTMLElement {
   constructor() {
     // If you define a constructor, always call super() first!
     // This is specific to CE and required by the spec.
@@ -22,5 +22,3 @@ class TestComponent extends HTMLElement {
     console.log("attribute changed", attrName);
   }
 }
-
-window.customElements.define("test-component", TestComponent);
