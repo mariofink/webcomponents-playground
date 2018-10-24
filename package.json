@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@webcomponents/webcomponentsjs": "^2.1.2"
+    "@webcomponents/custom-elements": "^1.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",

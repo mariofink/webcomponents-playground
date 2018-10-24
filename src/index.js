@@ -1,3 +1,5 @@
+import "@webcomponents/custom-elements";
+
 import TestComponent from "./components/testComponent";
 import Notification from "./components/notification/notification";
 
