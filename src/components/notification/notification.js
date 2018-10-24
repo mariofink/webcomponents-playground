@@ -1,3 +1,5 @@
+require("./notification.scss");
+
 export default class Notification extends HTMLElement {
   constructor() {
     super();
