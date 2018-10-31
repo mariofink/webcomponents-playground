@@ -17,13 +17,17 @@ export default class Notification extends HTMLElement {
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
+    if (newVal === null) return;
     if (attrName === "type") {
       this.typeChangedHandler(newVal);
     }
   }
 
   typeChangedHandler(value) {
-    console.log("type has been changed", this.childNodes);
+    console.log("type has been changed", value, this.childNodes);
+    for (let svg of this.getElementsByTagName("svg")) {
+      svg.remove();
+    }
     const svgElement = document
       .createRange()
       .createContextualFragment(icons[value]).firstChild;
