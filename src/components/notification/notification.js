@@ -1,11 +1,15 @@
 require("./notification.scss");
 
+const icons = {
+  info: require("./assets/info.svg"),
+  warning: require("./assets/warning.svg"),
+  success: require("./assets/success.svg"),
+  error: require("./assets/error.svg")
+};
+
 export default class Notification extends HTMLElement {
   constructor() {
     super();
-
-    this.notificationTypeDOMElement = document.createElement("img");
-    this.notificationTypeDOMElement.classList.add("my-notification__icon");
   }
 
   static get observedAttributes() {
@@ -20,10 +24,9 @@ export default class Notification extends HTMLElement {
 
   typeChangedHandler(value) {
     console.log("type has been changed", this.childNodes);
-    this.notificationTypeDOMElement.setAttribute(
-      "src",
-      `./assets/${value}.svg`
-    );
-    this.insertBefore(this.notificationTypeDOMElement, this.childNodes[0]);
+    const svgElement = document
+      .createRange()
+      .createContextualFragment(icons[value]).firstChild;
+    this.insertBefore(svgElement, this.childNodes[0]);
   }
 }

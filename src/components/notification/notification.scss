@@ -4,6 +4,13 @@ my-notification {
   margin: 1rem;
   padding: 1rem;
 
+  > svg {
+    height: 1.5rem;
+    margin-right: 1rem;
+    vertical-align: middle;
+    fill: currentColor;
+  }
+
   &[type="info"] {
     background: #118ab2;
     color: white;
