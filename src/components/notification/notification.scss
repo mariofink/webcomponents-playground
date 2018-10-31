@@ -1,4 +1,26 @@
 my-notification {
-  background: deeppink;
-  color: yellow;
+  border: 3px solid #073b4c;
+  display: block;
+  margin: 1rem;
+  padding: 1rem;
+
+  &[type="info"] {
+    background: #118ab2;
+    color: white;
+  }
+
+  &[type="warning"] {
+    background: #ffd166;
+    color: #333;
+  }
+
+  &[type="error"] {
+    background: #ef476f;
+    color: white;
+  }
+
+  &[type="success"] {
+    background: #06d6a0;
+    color: #333;
+  }
 }

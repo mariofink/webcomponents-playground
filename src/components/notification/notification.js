@@ -4,8 +4,8 @@ export default class Notification extends HTMLElement {
   constructor() {
     super();
 
-    this.notificationTypeDOMElement = document.createElement("span");
-    this.notificationTypeDOMElement.classList.add("my-notification__type");
+    this.notificationTypeDOMElement = document.createElement("img");
+    this.notificationTypeDOMElement.classList.add("my-notification__icon");
   }
 
   static get observedAttributes() {
@@ -20,7 +20,10 @@ export default class Notification extends HTMLElement {
 
   typeChangedHandler(value) {
     console.log("type has been changed", this.childNodes);
-    this.notificationTypeDOMElement.innerText = value;
+    this.notificationTypeDOMElement.setAttribute(
+      "src",
+      `./assets/${value}.svg`
+    );
     this.insertBefore(this.notificationTypeDOMElement, this.childNodes[0]);
   }
 }
