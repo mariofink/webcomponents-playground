@@ -1,3 +1,5 @@
+require("./index.scss");
+
 import "@webcomponents/custom-elements";
 
 import TestComponent from "./components/testComponent";
