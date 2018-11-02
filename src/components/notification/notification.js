@@ -13,13 +13,16 @@ export default class Notification extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ["type"];
+    return ["type", "dismissable"];
   }
 
   attributeChangedCallback(attrName, oldVal, newVal) {
     if (newVal === null) return;
     if (attrName === "type") {
       this.typeChangedHandler(newVal);
+    }
+    if (attrName === "dismissable") {
+      this.dismissableChangedHandler(newVal);
     }
   }
 
@@ -32,5 +35,15 @@ export default class Notification extends HTMLElement {
       .createRange()
       .createContextualFragment(icons[value]).firstChild;
     this.insertBefore(svgElement, this.childNodes[0]);
+  }
+
+  dismissableChangedHandler(value) {
+    if (value !== "true") return;
+    const dismissButton = document.createElement("button");
+    dismissButton.innerHTML = "&times;";
+    dismissButton.onclick = () => {
+      this.remove();
+    };
+    this.append(dismissButton);
   }
 }
