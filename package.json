@@ -1,13 +1,14 @@
 {
-  "name": "webcomponents",
+  "name": "webcomponents-playground",
   "version": "1.0.0",
   "description": "",
+  "private": true,
   "scripts": {
     "start": "webpack-dev-server",
     "watch": "webpack --watch",
     "build": "webpack --mode=production"
   },
-  "author": "",
+  "author": "Mario Fink",
   "license": "ISC",
   "dependencies": {
     "@webcomponents/custom-elements": "^1.2.1"
