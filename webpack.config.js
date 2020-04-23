@@ -1,7 +1,7 @@
 const devMode = process.env.NODE_ENV !== "production";
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
@@ -17,7 +17,7 @@ module.exports = {
     contentBase: "./dist"
   },
   plugins: [
-    new CleanWebpackPlugin(["dist"]),
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: "Web Components Playground",
       template: "src/index.html"
