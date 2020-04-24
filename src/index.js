@@ -1,5 +1,4 @@
-import styles from "./index.css";
-console.log("STYLES", styles)
+import "./index.css";
 
 import "@webcomponents/custom-elements";
 
