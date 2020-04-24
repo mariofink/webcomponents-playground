@@ -1,6 +1,7 @@
-import { LitElement, html, css } from 'lit-element';
+import { LitElement, html, unsafeCSS } from 'lit-element';
 import { classMap } from 'lit-html/directives/class-map';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html';
+import styles from "./litNotification.scss"
 
 const icons = {
   info: require("./assets/info.svg"),
@@ -12,53 +13,7 @@ const icons = {
 export default class LitNotification extends LitElement {
 
   static get styles() {
-    return css`
-      .container {
-        border: 3px solid #073b4c;
-        display: block;
-        margin: 1rem;
-        padding: 1rem; 
-        position: relative;
-      }
-
-      .container > svg {
-        height: 1.5rem;
-        margin-right: 1rem;
-        vertical-align: middle;
-        fill: currentColor;
-      }
-
-      .container > button {
-        background: transparent;
-        border: 0;
-        color: currentColor;
-        cursor: pointer;
-        font-size: 2rem;
-        line-height: 1rem;
-        position: absolute;
-        right: 0;
-      } 
-
-      .info {
-        background: #118ab2;
-        color: white;
-      }
-
-      .warning {
-        background: #ffd166;
-        color: #333;
-      }
-
-      .error {
-        background: #ef476f;
-        color: white;
-      }
-
-      .success {
-        background: #06d6a0;
-        color: #333;
-      }
-    `;
+    return unsafeCSS(styles);
   }
 
   static get properties() {
@@ -73,6 +28,7 @@ export default class LitNotification extends LitElement {
     // initialise properties
     this.type = "info";
     this.dismissable = false;
+    console.log(styles)
   }
 
   render(){

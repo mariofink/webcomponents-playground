@@ -1,0 +1,45 @@
+.container {
+  border: 3px solid #073b4c;
+  display: block;
+  margin: 1rem;
+  padding: 1rem; 
+  position: relative;
+}
+
+.container > svg {
+  height: 1.5rem;
+  margin-right: 1rem;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.container > button {
+  background: transparent;
+  border: 0;
+  color: currentColor;
+  cursor: pointer;
+  font-size: 2rem;
+  line-height: 1rem;
+  position: absolute;
+  right: 0;
+} 
+
+.info {
+  background: #118ab2;
+  color: white;
+}
+
+.warning {
+  background: #ffd166;
+  color: #333;
+}
+
+.error {
+  background: #ef476f;
+  color: white;
+}
+
+.success {
+  background: #06d6a0;
+  color: #333;
+}

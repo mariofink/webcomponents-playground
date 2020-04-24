@@ -44,10 +44,16 @@ module.exports = {
         }
       },
       {
-        test: /\.scss$/,
+        test:/\.css$/,
         use: [
           MiniCssExtractPlugin.loader,
           "css-loader", // translates CSS into CommonJS
+        ]
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          "raw-loader", // use raw-loader as LitElement will put it in the static styles property
           "sass-loader" // compiles Sass to CSS, using Node Sass by default
         ]
       },

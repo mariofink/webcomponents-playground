@@ -1,4 +1,5 @@
-require("./index.scss");
+import styles from "./index.css";
+console.log("STYLES", styles)
 
 import "@webcomponents/custom-elements";
 
