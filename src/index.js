@@ -8,4 +8,4 @@ import LitComponent from "./components/litComponent";
 
 window.customElements.define("test-component", TestComponent);
 window.customElements.define("my-notification", LitNotification);
-window.customElements.define('lit-component', LitComponent);
+window.customElements.define("lit-component", LitComponent);

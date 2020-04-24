@@ -4,7 +4,7 @@ export default class TestComponent extends HTMLElement {
     // This is specific to CE and required by the spec.
     super();
 
-    this.addEventListener("click", e => {
+    this.addEventListener("click", (e) => {
       console.log("I have been clicked", this);
       this.setAttribute("disabled", true);
     });
