@@ -68,7 +68,7 @@ export default class LitNotification extends LitElement {
     classes[this.type] = true;
     return html`
     <div class="container ${classMap(classes)}">
-      <img src="data:image/svg+xml;utf8,${icons.info}" alt="icon">
+      <img src="data:image/svg+xml;utf8,${icons[this.type]}" alt="icon">
       <slot></slot>
     </div>
     `;
