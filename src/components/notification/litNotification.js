@@ -28,6 +28,17 @@ export default class LitNotification extends LitElement {
         fill: currentColor;
       }
 
+      .container > button {
+        background: transparent;
+        border: 0;
+        color: currentColor;
+        cursor: pointer;
+        font-size: 2rem;
+        line-height: 1rem;
+        position: absolute;
+        right: 0;
+      } 
+
       .info {
         background: #118ab2;
         color: white;
@@ -70,6 +81,10 @@ export default class LitNotification extends LitElement {
     return html`
     <div class="container ${classMap(classes)}">
       ${unsafeHTML(icons[this.type])}
+      ${this.dismissable ? 
+        html`<button @click="${this.remove}">&times;</button>`
+      : ""
+      }
       <slot></slot>
     </div>
     `;
