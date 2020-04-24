@@ -1,5 +1,6 @@
 import { LitElement, html, css } from 'lit-element';
 import { classMap } from 'lit-html/directives/class-map';
+import { unsafeHTML } from 'lit-html/directives/unsafe-html';
 
 const icons = {
   info: require("./assets/info.svg"),
@@ -20,7 +21,7 @@ export default class LitNotification extends LitElement {
         position: relative;
       }
 
-      .container > img {
+      .container > svg {
         height: 1.5rem;
         margin-right: 1rem;
         vertical-align: middle;
@@ -68,7 +69,7 @@ export default class LitNotification extends LitElement {
     classes[this.type] = true;
     return html`
     <div class="container ${classMap(classes)}">
-      <img src="data:image/svg+xml;utf8,${icons[this.type]}" alt="icon">
+      ${unsafeHTML(icons[this.type])}
       <slot></slot>
     </div>
     `;
