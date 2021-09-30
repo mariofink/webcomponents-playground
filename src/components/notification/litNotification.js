@@ -1,6 +1,6 @@
-import { LitElement, html, unsafeCSS } from "lit-element";
-import { classMap } from "lit-html/directives/class-map";
-import { unsafeHTML } from "lit-html/directives/unsafe-html";
+import { LitElement, html, unsafeCSS } from "lit";
+import { classMap } from "lit/directives/class-map.js";
+import { unsafeHTML } from "lit/directives/unsafe-html.js";
 import styles from "./litNotification.scss";
 
 const icons = {

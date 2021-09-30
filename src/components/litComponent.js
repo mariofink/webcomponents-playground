@@ -1,5 +1,5 @@
 // Import the LitElement base class and html helper function
-import { LitElement, html } from "lit-element";
+import { LitElement, html } from "lit";
 
 // Extend the LitElement base class
 export default class LitComponent extends LitElement {
