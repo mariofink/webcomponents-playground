@@ -22,3 +22,5 @@ export default class LitComponent extends LitElement {
     `;
   }
 }
+
+window.customElements.define("lit-component", LitComponent);

@@ -44,3 +44,5 @@ export default class LitNotification extends LitElement {
     `;
   }
 }
+
+window.customElements.define("lit-notification", LitNotification);
